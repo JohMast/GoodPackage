@@ -2,10 +2,13 @@
 % Please edit documentation in R/sfsdgsgs.R
 \name{make_dwarf_job}
 \alias{make_dwarf_job}
-\title{Title}
+\title{Randomly select dwarf job}
 \usage{
 make_dwarf_job()
 }
+\value{
+A single string with the job of the dwarf.
+}
 \description{
-Title
+Randomly select dwarf job
 }

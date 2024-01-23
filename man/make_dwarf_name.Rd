@@ -4,15 +4,14 @@
 \alias{make_dwarf_name}
 \title{Function for making silly dwarf names}
 \usage{
-make_dwarf_name()
+make_dwarf_name(make_more_metal = TRUE)
+}
+\arguments{
+\item{make_more_metal}{Should certain vowels be replaced with umlauts? Default is \code{TRUE}.}
 }
 \value{
-A dwarf name
+A single dwarf name
 }
 \description{
 Function for making silly dwarf names
-}
-\examples{
-make_dwarf_name()
-
 }
