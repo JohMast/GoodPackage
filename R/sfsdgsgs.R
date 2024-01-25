@@ -1,3 +1,5 @@
+# Internal functions for dwarf building
+
 
 #' Function for making silly dwarf names
 #' @param make_more_metal Should certain vowels be replaced with umlauts? Default is \code{TRUE}.
@@ -5,15 +7,19 @@
 #' @importFrom stringr str_replace_all
 #'
 make_dwarf_name <- function(make_more_metal=TRUE){
-  pre <- c("Strong","Iron","Root","Heart","Forge","Oak","Beer")
-  post <- c("hammer","breaker","seeker","smasher","forger","drinker","miner","flipper")
-  family_name <- paste0(sample(pre,1), sample(post,1))
 
-  first <- c("Gol","Brug","Thor","Mar","Thel","Drun","Rog")
-  suf <- c("morn","dren","gund","a","gar","star","rik","tor")
-  first_name <- paste0(sample(first,1),sample(suf,1))
+  # Part 1: Make dwarven clan name by pasting random suffix to a random root
+  c_root <- c("Strong","Iron","Root","Heart","Forge","Oak","Beer")
+  c_suffix <- c("hammer","breaker","seeker","smasher","forger","drinker","miner","flipper")
+  clan_name <- paste0(sample(c_root,1), sample(c_suffix,1))
 
-  combined_name <- paste(first_name,family_name)
+  # Part 2: Make dwarven first name by pasting random suffix to a random root
+  f_root <- c("Gol","Brug","Thor","Mar","Thel","Drun","Rog","Thu","Ran","Gon","Gan","Ven")
+  f_suffix <- c("morn","dren","gund","a","gar","star","rik","tor","dal","dul","rul","tak")
+  first_name <- paste0(sample(f_root,1),sample(f_root,1))
+
+  # Part 3: Combine the first name and clan name by pasting them together
+  combined_name <- paste(first_name,clan_name)
 
   if(make_more_metal){
     combined_name <- str_replace_all(combined_name,"o","ö")

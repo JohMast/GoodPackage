@@ -2,7 +2,6 @@
 output: github_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -15,15 +14,11 @@ knitr::opts_chunk$set(
 
 # GoodPackage
 
-<!-- badges: start -->
-<!-- badges: end -->
-
-The goal of GoodPackage is to ...
+The goal of GoodPackage is to randomly generate dwarf names (and be an example package).
 
 ## Installation
 
-This is a good package please use it like this:
-
+You can install the development version of GoodPackage from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -32,11 +27,29 @@ devtools::install_github("JohMast/GoodPackage")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to create a dwarf:
 
 ```{r example}
 library(GoodPackage)
-## basic example code
-make_dwarf_name()
+print_dwarf()
 ```
+
+If you want your dwarves to be less metal:
+
+```{r}
+print_dwarf(make_more_metal = F)
+```
+
+If you want your dwarves to be of a specific age range:
+
+```{r}
+print_dwarf(min_age = 29,max_age = 40)
+```
+
+If you want several dwarves:
+```{r}
+sapply(1:10,print_dwarf)
+```
+
+
 

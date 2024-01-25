@@ -1,10 +1,10 @@
 Package: GoodPackage
-Title: What the Package Does (One Line, Title Case)
+Title: A Good Package.
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Johannes", "Mast", , "Johannes.Mast@dlr.de", role = c("aut", "cre"),
+           comment = c(ORCID = "1337-0000-0000-0000"))
+Description: A good package for printing dwarf names.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
